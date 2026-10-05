@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projek Saya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">NamaBrand</a>
+
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" class="aktif">Home</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="testimoni.html">Testimoni</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <button class="toggle" id="toggle" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- PRODUK -->
+  <section class="produk" id="produk">
+    <div class="produk-judul">
+      <h2>Produk Kami</h2>
+      <p>Pilihan produk terbaik untuk kamu.</p>
+    </div>
+
+    <div class="produk-grid">
+
+      <article class="kartu">
+        <img src="download (2).jpg" alt="Produk 1">
+        <div class="kartu-isi">
+          <h3>Nama Produk 1</h3>
+          <p>Deskripsi singkat produk satu.</p>
+          <span class="harga">Rp 25.000</span>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="download (3).jpg" alt="Produk 2">
+        <div class="kartu-isi">
+          <h3>Nama Produk 2</h3>
+          <p>Deskripsi singkat produk dua.</p>
+          <span class="harga">Rp 30.000</span>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="download (4).jpg" alt="Produk 3">
+        <div class="kartu-isi">
+          <h3>Nama Produk 3</h3>
+          <p>Deskripsi singkat produk tiga.</p>
+          <span class="harga">Rp 35.000</span>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="download (5).jpg" alt="Produk 4">
+        <div class="kartu-isi">
+          <h3>Nama Produk 4</h3>
+          <p>Deskripsi singkat produk empat.</p>
+          <span class="harga">Rp 40.000</span>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="download (6).jpg" alt="Produk 5">
+        <div class="kartu-isi">
+          <h3>Nama Produk 5</h3>
+          <p>Deskripsi singkat produk lima.</p>
+          <span class="harga">Rp 45.000</span>
+        </div>
+      </article>
+
+      <article class="kartu">
+        <img src="download (7).jpg" alt="Produk 6">
+        <div class="kartu-isi">
+          <h3>Nama Produk 6</h3>
+          <p>Deskripsi singkat produk enam.</p>
+          <span class="harga">Rp 50.000</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('buka');
+    });
+  </script>
+</body>
+</html>

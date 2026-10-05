@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projek Saya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#home" class="logo">NamaBrand</a>
+
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" class="aktif">Home</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="testimoni.html">Testimoni</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <button class="toggle" id="toggle" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <section class="galeri" id="galeri">
+  <div class="galeri-kepala">
+    <h2>Galeri</h2>
+    <p>Sekilas tentang produk, proses, tempat, dan hari-hari kami.</p>
+  </div>
+
+  <div class="galeri-filter" role="group" aria-label="Filter kategori">
+    <button class="filter aktif" data-filter="semua" aria-pressed="true">Semua</button>
+    <button class="filter" data-filter="produk" aria-pressed="false">Produk</button>
+    <button class="filter" data-filter="proses" aria-pressed="false">Proses</button>
+    <button class="filter" data-filter="tempat" aria-pressed="false">Tempat</button>
+    <button class="filter" data-filter="aktivitas" aria-pressed="false">Aktivitas</button>
+  </div>
+
+  <div class="galeri-grid">
+
+    <figure class="foto tinggi" data-kategori="produk">
+      <div class="foto-bingkai">
+        <img src="download (2).jpg" alt="Foto produk 1">
+        <span class="label">Produk</span>
+      </div>
+      <figcaption>Nama produk andalan</figcaption>
+    </figure>
+
+    <figure class="foto" data-kategori="proses">
+      <div class="foto-bingkai">
+        <img src="p.jpg" alt="Foto proses 1">
+        <span class="label">Proses</span>
+      </div>
+      <figcaption>Bahan disiapkan sejak pagi</figcaption>
+    </figure>
+
+    <figure class="foto" data-kategori="tempat">
+      <div class="foto-bingkai">
+        <img src="t.jpg" alt="Foto tempat usaha 1">
+        <span class="label">Tempat</span>
+      </div>
+      <figcaption>Tampak depan tempat kami</figcaption>
+    </figure>
+
+    <figure class="foto tinggi" data-kategori="aktivitas">
+      <div class="foto-bingkai">
+        <img src="a.jpg" alt="Foto aktivitas 1">
+        <span class="label">Aktivitas</span>
+      </div>
+      <figcaption>Rapat tim setiap Senin</figcaption>
+    </figure>
+
+    <figure class="foto" data-kategori="produk">
+      <div class="foto-bingkai">
+        <img src="download (3).jpg" alt="Foto produk 2">
+        <span class="label">Produk</span>
+      </div>
+      <figcaption>Varian terbaru bulan ini</figcaption>
+    </figure>
+
+    <figure class="foto tinggi" data-kategori="proses">
+      <div class="foto-bingkai">
+        <img src="p2.jpg" alt="Foto proses 2">
+        <span class="label">Proses</span>
+      </div>
+      <figcaption>Pengecekan kualitas sebelum dikirim</figcaption>
+    </figure>
+
+    <figure class="foto" data-kategori="tempat">
+      <div class="foto-bingkai">
+        <img src="t2.jpg" alt="Foto tempat usaha 2">
+        <span class="label">Tempat</span>
+      </div>
+      <figcaption>Area dalam yang nyaman</figcaption>
+    </figure>
+
+    <figure class="foto" data-kategori="aktivitas">
+      <div class="foto-bingkai">
+        <img src="a2.jpg" alt="Foto aktivitas 2">
+        <span class="label">Aktivitas</span>
+      </div>
+      <figcaption>Berbagi bersama pelanggan</figcaption>
+    </figure>
+
+    <figure class="foto tinggi" data-kategori="produk">
+      <div class="foto-bingkai">
+        <img src="download (4).jpg" alt="Foto produk 3">
+        <span class="label">Produk</span>
+      </div>
+      <figcaption>Kemasan baru kami</figcaption>
+    </figure>
+
+    <figure class="foto" data-kategori="proses">
+      <div class="foto-bingkai">
+        <img src="p3.jpg" alt="Foto proses 3">
+        <span class="label">Proses</span>
+      </div>
+      <figcaption>Dikerjakan dengan tangan</figcaption>
+    </figure>
+
+    <figure class="foto" data-kategori="tempat">
+      <div class="foto-bingkai">
+        <img src="t3.jpg" alt="Foto tempat usaha 3">
+        <span class="label">Tempat</span>
+      </div>
+      <figcaption>Sudut favorit pelanggan</figcaption>
+    </figure>
+
+    <figure class="foto tinggi" data-kategori="aktivitas">
+      <div class="foto-bingkai">
+        <img src="a3.jpg" alt="Foto aktivitas 3">
+        <span class="label">Aktivitas</span>
+      </div>
+      <figcaption>Ikut bazar akhir pekan</figcaption>
+    </figure>
+
+  </div>
+</section>
+<script>
+<!-- Filter galeri -->
+const tombolFilter = document.querySelectorAll('.filter');
+const semuaFoto = document.querySelectorAll('.foto');
+
+tombolFilter.forEach(tombol => {
+  tombol.addEventListener('click', () => {
+    const pilihan = tombol.dataset.filter;
+
+    tombolFilter.forEach(t => {
+      t.classList.remove('aktif');
+      t.setAttribute('aria-pressed', 'false');
+    });
+    tombol.classList.add('aktif');
+    tombol.setAttribute('aria-pressed', 'true');
+
+    semuaFoto.forEach(foto => {
+      const cocok = pilihan === 'semua' || foto.dataset.kategori === pilihan;
+      foto.classList.toggle('sembunyi', !cocok);
+    });
+  });
+});
+<script/>
